@@ -7,12 +7,8 @@ describe('Book a demo test', () => {
     cy.get('button[data-modal-type="demo-form"]').click({ force: true });
 
     // Fill in the form with required information
-    cy.intercept('/api/data').as('dataLoaded');
-    cy.visit('/page-with-element');
-    cy.wait('@dataLoaded');
-    cy.get('#name').should('be.visible');
-
-    cy.get('#name').type('Ge Gre')
+    cy.get('#FirstName').type('Ge')
+    cy.get('#LastName').type('Gre')
     cy.get('#email').type('geo@example.com')
     cy.get('#phone').type('1234567890')
     cy.get('#company').type('Geo Inc.')
