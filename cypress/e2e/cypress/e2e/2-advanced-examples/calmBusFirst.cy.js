@@ -26,7 +26,7 @@ describe('Book a demo test', () => {
     cy.url().should('include', 'info.calm.com/Demo-Request')
 
     // Assert that the page contains the correct title
-    cy.title().should('contain', 'Schedule a Demo')
+    cy.title().should('contain', "We can't wait to meet you")
 
     // Assert that the form has been submitted successfully
     cy.get('.mc-form-thank-you').should('be.visible')
