@@ -4,7 +4,9 @@ describe('Book a demo test', () => {
     cy.visit('https://business.calm.com/')
 
     // Click on the "get a personalized tour" button
-    cy.contains('See Calm Business in action').click()
+    //cy.contains('Get a personalized tour').click()
+    cy.get('button[data-modal-type="demo-form"]').click({ force: true });
+
 
     // Fill in the form with required information
     cy.get('#name').type('Ge Gre')
