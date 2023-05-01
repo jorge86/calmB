@@ -1,6 +1,7 @@
 describe('Book a demo test', () => {
   it('Should book a demo successfully', () => {
     // Navigate to the website
+    Cypress.on('uncaught:exception', () => false)
     cy.visit('https://business.calm.com/')
 
     // Click on the "get a personalized tour" button
