@@ -8,6 +8,7 @@ describe('Book a demo test', () => {
     cy.get('button[data-modal-type="demo-form"]').click({ force: true });
 
     // Fill in the form with required information
+    cy.get('#name', { timeout: 10000 }).should('be.visible');
     cy.get('#name').type('Ge Gre')
     cy.get('#email').type('geo@example.com')
     cy.get('#phone').type('1234567890')
