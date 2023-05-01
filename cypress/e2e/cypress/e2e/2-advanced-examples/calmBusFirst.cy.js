@@ -15,10 +15,12 @@ describe('Book a demo test', () => {
     cy.get('#Email').clear().type('geo@example.com', {force: true});
     cy.get('#Company').clear().type('Geo Inc.', {force: true});
     cy.get('#company_size__c').select('5-20', {force: true});
-    cy.get('#useCase').select('Stress Management')
+    cy.get('#Title').clear().type('QA', {force: true});
+    cy.get('#Country').select('Greece', {force: true});
+    cy.get('#Form_Submission_Notes__c').clear().type('test', {force: true});
 
     // Click on the "book a demo" button
-    cy.contains('Book a demo').click()
+    cy.contains('Book demo').click()
 
     // Assert that the page has been navigated to the correct URL
     cy.url().should('include', 'calm.com/schedule-demo')
