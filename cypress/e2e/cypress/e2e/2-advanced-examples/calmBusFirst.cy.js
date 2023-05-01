@@ -8,14 +8,13 @@ describe('Book a demo test', () => {
     cy.get('button[data-modal-type="demo-form"]').click({ force: true });
 
     // Fill in the form with required information
-    //cy.get('#FirstName').type('Ge')
+    cy.get('#FirstName').clear().type('Ge', {force: true});
     cy.get('#LastName').clear().type('Gre', {force: true});
     //cy.xpath("//input[@id='LastName']")
     //  .type("your text here");
-    cy.get('#email').type('geo@example.com')
-    cy.get('#phone').type('1234567890')
-    cy.get('#company').type('Geo Inc.')
-    cy.get('#teamSize').select('11-50')
+    cy.get('#Email').clear().type('geo@example.com', {force: true});
+    cy.get('#Company').clear().type('Geo Inc.', {force: true});
+    cy.get('#company_size__c').select('5-20', {force: true});
     cy.get('#useCase').select('Stress Management')
 
     // Click on the "book a demo" button
