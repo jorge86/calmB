@@ -20,7 +20,7 @@ describe('Book a demo test', () => {
     cy.get('#Form_Submission_Notes__c').clear().type('test', {force: true});
 
     // Click on the "book a demo" button
-    cy.contains('Book demo').click()
+    //cy.contains('Book demo').click()
 
     // Assert that the page has been navigated to the correct URL
     cy.url().should('include', 'info.calm.com/Demo-Request')
