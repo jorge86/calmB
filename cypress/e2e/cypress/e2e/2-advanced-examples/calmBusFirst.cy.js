@@ -8,7 +8,7 @@ describe('Book a demo test', () => {
 
     // Fill in the form with required information
     //cy.get('#FirstName').type('Ge')
-    cy.get('#LastName').type('Gre', { force: true })
+    cy.get('#LastName').clear().type('Gre', {force: true});
     //cy.xpath("//input[@id='LastName']")
     //  .type("your text here");
     cy.get('#email').type('geo@example.com')
