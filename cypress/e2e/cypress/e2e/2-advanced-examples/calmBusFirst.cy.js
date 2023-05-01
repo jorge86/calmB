@@ -27,5 +27,7 @@ describe('Book a demo test', () => {
 
     // Assert that the form has been submitted successfully
     //cy.get('.main main--thanks').should('be.visible')
+
+    cy.log('Test finished')
   })
 })
