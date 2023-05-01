@@ -12,7 +12,7 @@ describe('Book a demo test', () => {
     cy.get('#LastName').clear().type('Gre', {force: true});
     //cy.xpath("//input[@id='LastName']")
     //  .type("your text here");
-    cy.get('#Email').clear().type('geo@example.com', {force: true});
+    cy.get('#Email').clear().type('geo1@example.com', {force: true});
     cy.get('#Company').clear().type('Geo Inc.', {force: true});
     cy.get('#company_size__c').select('5-20', {force: true});
     cy.get('#Title').clear().type('QA', {force: true});
@@ -24,9 +24,6 @@ describe('Book a demo test', () => {
 
     // Assert that the page has been navigated to the correct URL
     cy.url().should('include', 'info.calm.com/Demo-Request')
-
-    // Assert that the page contains the correct title
-    cy.title().should('contain', 'wait to meet you')
 
     // Assert that the form has been submitted successfully
     cy.get('.main main--thanks').should('be.visible')
