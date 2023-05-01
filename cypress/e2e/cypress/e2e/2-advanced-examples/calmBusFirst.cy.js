@@ -4,11 +4,14 @@ describe('Book a demo test', () => {
     cy.visit('https://business.calm.com/')
 
     // Click on the "get a personalized tour" button
-    //cy.contains('Get a personalized tour').click()
     cy.get('button[data-modal-type="demo-form"]').click({ force: true });
 
     // Fill in the form with required information
-    cy.get('#name', { timeout: 10000 }).should('be.visible');
+    cy.intercept('/api/data').as('dataLoaded');
+    cy.visit('/page-with-element');
+    cy.wait('@dataLoaded');
+    cy.get('#name').should('be.visible');
+
     cy.get('#name').type('Ge Gre')
     cy.get('#email').type('geo@example.com')
     cy.get('#phone').type('1234567890')
