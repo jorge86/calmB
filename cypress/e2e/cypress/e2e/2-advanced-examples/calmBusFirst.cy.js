@@ -23,7 +23,7 @@ describe('Book a demo test', () => {
     cy.contains('Book demo').click()
 
     // Assert that the page has been navigated to the correct URL
-    cy.url().should('include', 'calm.com/schedule-demo')
+    cy.url().should('include', 'info.calm.com/Demo-Request')
 
     // Assert that the page contains the correct title
     cy.title().should('contain', 'Schedule a Demo')
