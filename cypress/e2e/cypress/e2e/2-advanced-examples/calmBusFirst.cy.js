@@ -14,7 +14,7 @@ describe('Book a demo test', () => {
     //  .type("your text here");
     cy.get('#Email').clear().type('geo1@example.com', {force: true});
     cy.get('#Company').clear().type('Geo Inc.', {force: true});
-    cy.get('#company_size__c').select('5-20', {force: true});
+    cy.get('#company_size__c').select('5-100', {force: true});
     cy.get('#Title').clear().type('QA', {force: true});
     cy.get('#Country').select('Greece', {force: true});
     cy.get('#Form_Submission_Notes__c').clear().type('test', {force: true});
